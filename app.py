@@ -5,7 +5,13 @@ st.set_page_config(page_title="Netflix Movie Recommender",layout="centered")
 st.title("Netflix Movie Recommendation System")
 
 movies = pickle.load(open("movies.pkl","rb"))
-similarity = pickle.load(open("similarity.pkl","rb"))
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+tfidf=TfidfVectorizer(stop_words="english")
+tfidf_matrix=tfidf.fit_transform(movies["tags"])
+similarity=cosine_similarity(tfidf_matrix)
 
 def recommend(movie):
     movie = movie.lower()
