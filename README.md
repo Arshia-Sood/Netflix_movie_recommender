@@ -24,13 +24,14 @@ A content-based movie recommendation system built using **Python**, **Streamlit*
 
 
 ##  Project Structure
-├── app.py # Streamlit frontend
-├── build_model.ipynb # Preprocessing + TF-IDF + similarity calculation
-├── movies.pkl # Preprocessed movie data (with tags)
-├── netflix_logo.jpg # Banner/logo for UI
-├── requirements.txt # Python dependencies
-├── .gitignore # To ignore large files like similarity.pkl
-└── README.md # Project description
+- `app.py` – Streamlit frontend  
+- `build_model.ipynb` – Preprocessing + TF-IDF + similarity calculation    
+- `movies.pkl` – Preprocessed movie data  
+- `similarity.pkl` – Similarity matrix (ignored in Git)
+- `netflix_logo.jpg` – Logo/banner for UI
+- `requirements.txt` – Dependencies  
+- `.gitignore` – To ignore large files
+- `README.md` – Project documentation
 
 
 
